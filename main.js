@@ -9,7 +9,6 @@ let array_sabores = {
     1:["BANANA CHERRY DRAGON FRUIT", "BANANA ICE", "BERRY WATERMELON", "BLACK DRAGON FRUIT", "BLACK MINT", "BLUE RAZ LEMON", "BLUEBERRY CHERRY"],
     2:["FRUTY CHEWS"]
 }
-
 products.forEach((element, index) => {
     element.addEventListener("click", (e) => {
         container_modal.style.display = "grid"
