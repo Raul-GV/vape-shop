@@ -1,0 +1,175 @@
+/*  M  E  N  U */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Sofadi One", system-ui;
+}
+.container{
+    background-image: url("imgs/fondo.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position:center;
+    background-attachment: fixed;
+    
+}
+.container,
+header{
+    width: 100%;
+    height: auto;
+}
+header{
+    position: fixed;
+    top: 0;
+    z-index:2;
+}
+.menu{
+    width: 100%;
+    background:#FCCB52;
+    padding: 20px 5px;
+    user-select: none;
+}
+.menu ul{
+    display: flex;
+    list-style: none;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+.menu ul li,
+.menu ul li a{
+    text-decoration: none;
+    color: #000;
+    font-size: 14px;
+}
+.menu ul li {
+    font-weight: bold;
+    font-size: 20px;
+}
+.menu ul li a svg{
+    width: 50px;
+}
+
+/*  M  A  I  N  */
+.main{
+    padding: 100px 0 50px 0;
+    width: 100%;
+    height: auto;
+}
+.catalogo{
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+@media (min-width: 700px) {
+    .catalogo{
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+    }    
+}
+@media (min-width: 1200px) {
+    .catalogo{
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+    }    
+}
+.catalogo .product{
+    width: 100%;
+    height: 300px;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    box-shadow: 1px 1px 10px 2.5px #6a6a6ac9;
+    overflow: hidden;
+    cursor: pointer;
+    user-select:none;
+    z-index: 1;
+}
+.catalogo .product .img{
+    width: 100%;
+    height: 80%;
+    display: grid;
+    place-items:center;
+    background: #40E0D0;
+}
+.catalogo .product .img img{
+    width: 250px;
+}
+.catalogo .product .info{
+    width: 100%;
+    height: 100%;
+    padding: 5px 10px;
+    background: #fff;
+}
+.catalogo .product .info .name{
+    font-weight: bold;
+    line-height: 25px;
+}
+.catalogo .product .info .price{
+    display: block;
+    font-weight: bold;
+    color: #F56542;
+}
+
+
+/*   M  O  D  A  L */
+.container_modal{
+    display: none;
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    place-items: center;
+    background: #00000053;
+    z-index: 2;
+    cursor: pointer;
+}
+.modal{
+    width: 70%;
+    height: 500px;
+    background: #fff;
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    cursor: auto;
+    z-index: 5;
+    overflow: hidden;
+}
+.modal h2{
+    margin:10px;
+}
+.modal .sabores{
+    width: 100%;
+    height: 300px;
+    overflow-y:scroll;
+}
+.modal .sabores .sabor{
+    width: 100%;
+    height: auto;
+    padding: 20px 10px;
+    border-bottom: 1px solid #e2dada;
+}
+.modal .comprar{
+    width: 100%;
+    height: 200px;
+    display: grid;
+    place-items: center;
+}
+.modal .comprar  a{
+    padding:15px 50px;
+    cursor: pointer;
+    background: rgb(30, 233, 54);
+    border-radius: 20px;
+    -webkit-border-radius: 20px;
+    -moz-border-radius: 20px;
+    -ms-border-radius: 20px;
+    -o-border-radius: 20px;
+    text-decoration: none;
+    color: #000;
+    font-weight: bold;
+}
